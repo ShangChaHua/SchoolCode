@@ -1,0 +1,2 @@
+# SchoolCode
+use by shcool
