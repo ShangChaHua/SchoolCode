@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace用来绑定mapper接口-->
+<!--author：HongDongXv-->
+<mapper namespace="com.dao.GoodMapper">
+
+
+
+    <insert id="addGood" parameterType="Good">
+        insert into good (goodName,quantity) values(#{goodName},#{quantity})
+    </insert>
+
+
+
+    <delete id="delGood" parameterType="int">
+        delete from good where id = #{id}
+    </delete>
+
+
+    <update id="updateGood" parameterType="Good">
+        update good set goodName = #{goodName}, quantity =#{quantity} where id =#{id}
+    </update>
+
+
+    <select id="findGoodById" resultType="Good">
+        select id,goodName,quantity from good where id = #{id}
+    </select>
+
+
+    <select id="selectAllGood" resultType="Good">
+        select id,goodName,quantity from good
+    </select>
+
+
+    <select id="findGoodByName" resultType="Good">
+        select id,goodName,quantity from good where goodName = #{goodName}
+    </select>
+</mapper>

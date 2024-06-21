@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--service层扫描包，将类交由ioc容器来管理-->
+    <context:component-scan base-package="com.service"/>
+
+    <!--因为这里我们是使用xml配置bean的方式，所以需要手动将bean注入-->
+    <bean id="goodServiceImpl" class="com.service.GoodServiceImpl">
+        <!--因为这里，我们service层使用了dao层的类。所以需要将dao层的类单独注入-->
+        <property name="goodMapper" ref="goodMapper"/>
+    </bean>
+
+    <!--因为这里我们是使用xml配置bean的方式，所以需要手动将bean注入-->
+    <bean id="userServiceImpl" class="com.service.UserServiceImpl">
+        <!--因为这里，我们service层使用了dao层的类。所以需要将dao层的类单独注入-->
+        <property name="userMapper" ref="userMapper"/>
+    </bean>
+
+    <!--配置事务管理器-->
+    <bean class="org.springframework.jdbc.datasource.DataSourceTransactionManager" id="transactionManager">
+        <!--注入数据库连接池-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,10 @@
+com\dao\UserMapper.class
+com\controller\GoodController.class
+com\pojo\Good.class
+com\service\UserServiceImpl.class
+com\service\GoodService.class
+com\pojo\User.class
+com\controller\UserController.class
+com\service\GoodServiceImpl.class
+com\dao\GoodMapper.class
+com\service\UserService.class

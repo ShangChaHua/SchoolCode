@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace用来绑定mapper接口-->
+<!--author：HongDongXv-->
+<mapper namespace="com.dao.UserMapper">
+
+    <!-- 根据用户名查询用户 -->
+    <select id="findUserByName" resultType="User">
+        select id,userName,password from user where userName = #{userName}
+    </select>
+
+    <!-- 注册用户 -->
+    <insert id="insertUser" parameterType="User">
+        INSERT INTO user(userName, password) VALUES(#{userName}, #{password})
+    </insert>
+</mapper>

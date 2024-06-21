@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:25 +0800] "GET /GoodMS HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:25 +0800] "GET /GoodMS/ HTTP/1.1" 200 2046 http-bio-8080-exec-3 71
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:25 +0800] "GET /GoodMS/img1.png HTTP/1.1" 200 77600 http-bio-8080-exec-4 17
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:37 +0800] "POST /GoodMS/user/login HTTP/1.1" 302 - http-bio-8080-exec-5 1080
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:37 +0800] "GET /GoodMS/good/allGood HTTP/1.1" 200 14319 http-bio-8080-exec-6 37
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:47 +0800] "GET /GoodMS/good/toAddGood HTTP/1.1" 200 2045 http-bio-8080-exec-7 12
+0:0:0:0:0:0:0:1 - - [29/May/2024:19:57:50 +0800] "GET /GoodMS/ HTTP/1.1" 200 2046 http-bio-8080-exec-8 3
+0:0:0:0:0:0:0:1 - - [29/May/2024:20:01:12 +0800] "POST /GoodMS/user/login HTTP/1.1" 302 - http-bio-8080-exec-10 9
+0:0:0:0:0:0:0:1 - - [29/May/2024:20:01:12 +0800] "GET /GoodMS/index.jsp?error=%E7%94%A8%E6%88%B7%E5%90%8D%E6%88%96%E5%AF%86%E7%A0%81%E9%94%99%E8%AF%AF%EF%BC%81 HTTP/1.1" 200 2046 http-bio-8080-exec-10 2
